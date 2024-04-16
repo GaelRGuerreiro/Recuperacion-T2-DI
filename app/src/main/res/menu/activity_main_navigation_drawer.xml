@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/inicio"
+            android:icon="@drawable/parrilla"
+            android:title="@string/inicio"
+            />
+        <item android:title="@string/separator" />
+
+        <item
+
+            android:id="@+id/circuitos"
+            android:icon="@drawable/circuito"
+            android:title="@string/circuitos" />
+        <item android:title="@string/separator" />
+
+        <item
+
+            android:id="@+id/perfil"
+            android:icon="@drawable/volante"
+            android:title="@string/Perfil" />
+        <item android:title="@string/separator" />
+
+        <item
+
+            android:id="@+id/escuderias"
+            android:icon="@drawable/f1"
+            android:title="@string/escuderias" />
+        <item android:title="@string/separator" />
+
+        <item
+
+            android:id="@+id/pilotos"
+            android:icon="@drawable/casco"
+            android:title="@string/pilotos" />
+        <item android:title="@string/separator" />
+
+    </group>
+
+</menu>
