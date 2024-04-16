@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "820188295255",
+    "project_id": "f1-racing-firebase",
+    "storage_bucket": "f1-racing-firebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:820188295255:android:82f2730f246ed3844d3312",
+        "android_client_info": {
+          "package_name": "com.example.f1racinglpg"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLUx-ZPkvOC2yMzSR0IvYKASHQc01a-yQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
