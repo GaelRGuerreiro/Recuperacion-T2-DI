@@ -1,9 +1,20 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.F1RacingLPG" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+    <style name="F1RacingLPG" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@color/buttonColor</item>
+        <item name="toolbarStyle">@style/Widget.MaterialComponents.Toolbar.PrimarySurface</item>
+        <item name="drawerArrowStyle">@style/F1RacingLPGTheme.DrawerArrowStyle</item>
+        <item name="buttonStyle">@style/RedButton</item>
+
+
     </style>
 
-    <style name="Theme.F1RacingLPG" parent="Base.Theme.F1RacingLPG" />
+    <style name="F1RacingLPGTheme.DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+    </style>
+
+    <style name="RedButton" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/buttonColor</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
 </resources>
