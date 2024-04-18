@@ -11,35 +11,30 @@
             android:icon="@drawable/parrilla"
             android:title="@string/inicio"
             />
-        <item android:title="@string/separator" />
 
         <item
 
             android:id="@+id/circuitos"
             android:icon="@drawable/circuito"
             android:title="@string/circuitos" />
-        <item android:title="@string/separator" />
 
         <item
 
             android:id="@+id/perfil"
             android:icon="@drawable/volante"
             android:title="@string/Perfil" />
-        <item android:title="@string/separator" />
 
         <item
 
             android:id="@+id/escuderias"
             android:icon="@drawable/f1"
             android:title="@string/escuderias" />
-        <item android:title="@string/separator" />
 
         <item
 
             android:id="@+id/pilotos"
             android:icon="@drawable/casco"
             android:title="@string/pilotos" />
-        <item android:title="@string/separator" />
 
     </group>
 

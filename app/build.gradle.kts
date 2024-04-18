@@ -4,6 +4,7 @@ plugins {
 }
 
 android {
+
     namespace = "com.example.f1racinglpg"
     compileSdk = 34
 
