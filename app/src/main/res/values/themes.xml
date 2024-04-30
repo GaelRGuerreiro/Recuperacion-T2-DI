@@ -5,6 +5,7 @@
         <item name="toolbarStyle">@style/Widget.MaterialComponents.Toolbar.PrimarySurface</item>
         <item name="drawerArrowStyle">@style/F1RacingLPGTheme.DrawerArrowStyle</item>
         <item name="buttonStyle">@style/RedButton</item>
+        <item name="backgroundTint">@color/drawerBackground</item>
 
 
     </style>
