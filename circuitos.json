@@ -11,7 +11,7 @@
       "Circuits": [
         {
           "circuitId": "albert_park",
-          "url": "http://en.wikipedia.org/wiki/Melbourne_Grand_Prix_Circuit",
+          "url": "https://rsl00.epimg.net/iconos/resultados/2024/deportivos/motor/formula-1/circuitos/mini/albert_park.png",
           "circuitName": "Albert Park Grand Prix Circuit",
           "Location": {
             "lat": "-37.8497",
@@ -22,7 +22,7 @@
         },
         {
           "circuitId": "americas",
-          "url": "http://en.wikipedia.org/wiki/Circuit_of_the_Americas",
+          "url": "https://en.gpvwc.com/wiki/images/f/fc/Circuit_of_the_Americas.png",
           "circuitName": "Circuit of the Americas",
           "Location": {
             "lat": "30.1328",
@@ -33,7 +33,7 @@
         },
         {
           "circuitId": "bahrain",
-          "url": "http://en.wikipedia.org/wiki/Bahrain_International_Circuit",
+          "url": "https://rsl00.epimg.net/iconos/resultados/2024/deportivos/motor/formula-1/circuitos/mini/sakhir.png",
           "circuitName": "Bahrain International Circuit",
           "Location": {
             "lat": "26.0325",
@@ -44,7 +44,7 @@
         },
         {
           "circuitId": "baku",
-          "url": "http://en.wikipedia.org/wiki/Baku_City_Circuit",
+          "url": "https://rsl00.epimg.net/iconos/resultados/2024/deportivos/motor/formula-1/circuitos/mini/baku_city_circuit.png",
           "circuitName": "Baku City Circuit",
           "Location": {
             "lat": "40.3725",
@@ -55,7 +55,7 @@
         },
         {
           "circuitId": "catalunya",
-          "url": "http://en.wikipedia.org/wiki/Circuit_de_Barcelona-Catalunya",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Circuit_de_Barcelona-Catalunya_GP_Layout_2004-2006.png",
           "circuitName": "Circuit de Barcelona-Catalunya",
           "Location": {
             "lat": "41.57",
@@ -66,7 +66,7 @@
         },
         {
           "circuitId": "hungaroring",
-          "url": "http://en.wikipedia.org/wiki/Hungaroring",
+          "url": "https://rsl00.epimg.net/iconos/resultados/2024/deportivos/motor/formula-1/circuitos/mini/hungaroring.png",
           "circuitName": "Hungaroring",
           "Location": {
             "lat": "47.5789",
@@ -77,7 +77,7 @@
         },
         {
           "circuitId": "imola",
-          "url": "http://en.wikipedia.org/wiki/Autodromo_Enzo_e_Dino_Ferrari",
+          "url": "https://rsl00.epimg.net/iconos/resultados/2024/deportivos/motor/formula-1/circuitos/mini/imola.png",
           "circuitName": "Autodromo Enzo e Dino Ferrari",
           "Location": {
             "lat": "44.3439",
@@ -88,7 +88,7 @@
         },
         {
           "circuitId": "interlagos",
-          "url": "http://en.wikipedia.org/wiki/Aut%C3%B3dromo_Jos%C3%A9_Carlos_Pace",
+          "url": "https://rsl00.epimg.net/iconos/resultados/2024/deportivos/motor/formula-1/circuitos/mini/interlagos.png",
           "circuitName": "Autódromo José Carlos Pace",
           "Location": {
             "lat": "-23.7036",
@@ -99,7 +99,7 @@
         },
         {
           "circuitId": "jeddah",
-          "url": "http://en.wikipedia.org/wiki/Jeddah_Street_Circuit",
+          "url": "https://rsl00.epimg.net/iconos/resultados/2024/deportivos/motor/formula-1/circuitos/mini/jeddah_international_street_circuit.png",
           "circuitName": "Jeddah Corniche Circuit",
           "Location": {
             "lat": "21.6319",
@@ -110,7 +110,7 @@
         },
         {
           "circuitId": "losail",
-          "url": "http://en.wikipedia.org/wiki/Losail_International_Circuit",
+          "url": "https://rsl00.epimg.net/iconos/resultados/2024/deportivos/motor/formula-1/circuitos/mini/losail.png",
           "circuitName": "Losail International Circuit",
           "Location": {
             "lat": "25.49",
@@ -121,7 +121,7 @@
         },
         {
           "circuitId": "marina_bay",
-          "url": "http://en.wikipedia.org/wiki/Marina_Bay_Street_Circuit",
+          "url": "https://rsl00.epimg.net/iconos/resultados/2024/deportivos/motor/formula-1/circuitos/mini/marina_bay.png",
           "circuitName": "Marina Bay Street Circuit",
           "Location": {
             "lat": "1.2914",
@@ -132,7 +132,7 @@
         },
         {
           "circuitId": "miami",
-          "url": "http://en.wikipedia.org/wiki/Miami_International_Autodrome",
+          "url": "https://staticfanpage.akamaized.net/sport/motors/circuits/miami.png",
           "circuitName": "Miami International Autodrome",
           "Location": {
             "lat": "25.9581",
@@ -143,7 +143,7 @@
         },
         {
           "circuitId": "monaco",
-          "url": "http://en.wikipedia.org/wiki/Circuit_de_Monaco",
+          "url": "https://rsl00.epimg.net/iconos/resultados/2024/deportivos/motor/formula-1/circuitos/mini/montecarlo.png",
           "circuitName": "Circuit de Monaco",
           "Location": {
             "lat": "43.7347",
@@ -154,7 +154,7 @@
         },
         {
           "circuitId": "monza",
-          "url": "http://en.wikipedia.org/wiki/Autodromo_Nazionale_Monza",
+          "url": "https://rsl00.epimg.net/iconos/resultados/2024/deportivos/motor/formula-1/circuitos/mini/monza.png",
           "circuitName": "Autodromo Nazionale di Monza",
           "Location": {
             "lat": "45.6156",
@@ -165,7 +165,7 @@
         },
         {
           "circuitId": "red_bull_ring",
-          "url": "http://en.wikipedia.org/wiki/Red_Bull_Ring",
+          "url": "https://rsl00.epimg.net/iconos/resultados/2024/deportivos/motor/formula-1/circuitos/mini/red_bull_ring.png",
           "circuitName": "Red Bull Ring",
           "Location": {
             "lat": "47.2197",
@@ -176,7 +176,7 @@
         },
         {
           "circuitId": "rodriguez",
-          "url": "http://en.wikipedia.org/wiki/Aut%C3%B3dromo_Hermanos_Rodr%C3%ADguez",
+          "url": "https://immagini.alvolante.it/sites/default/files/styles/f1_3_colonne/public/f1_anteprima/2017/18-messico_mexico-city.png?itok=HxjggiJt",
           "circuitName": "Autódromo Hermanos Rodríguez",
           "Location": {
             "lat": "19.4042",
@@ -187,7 +187,7 @@
         },
         {
           "circuitId": "shanghai",
-          "url": "http://en.wikipedia.org/wiki/Shanghai_International_Circuit",
+          "url": "https://rsl00.epimg.net/iconos/resultados/2024/deportivos/motor/formula-1/circuitos/mini/shanghai.png",
           "circuitName": "Shanghai International Circuit",
           "Location": {
             "lat": "31.3389",
@@ -198,7 +198,7 @@
         },
         {
           "circuitId": "silverstone",
-          "url": "http://en.wikipedia.org/wiki/Silverstone_Circuit",
+          "url": "https://immagini.alvolante.it/sites/default/files/styles/f1_larghezza_full/public/f1_anteprima/2017/09-gran-bretagna_silverston.png?itok=8NsHD2_B",
           "circuitName": "Silverstone Circuit",
           "Location": {
             "lat": "52.0786",
@@ -209,7 +209,7 @@
         },
         {
           "circuitId": "spa",
-          "url": "http://en.wikipedia.org/wiki/Circuit_de_Spa-Francorchamps",
+          "url": "https://immagini.alvolante.it/sites/default/files/styles/f1_larghezza_full/public/f1_anteprima/2017/12-belgio_spa-francorchamps.png?itok=iyg4b_fX",
           "circuitName": "Circuit de Spa-Francorchamps",
           "Location": {
             "lat": "50.4372",
@@ -220,7 +220,7 @@
         },
         {
           "circuitId": "suzuka",
-          "url": "http://en.wikipedia.org/wiki/Suzuka_Circuit",
+          "url": "https://static.thenounproject.com/png/2771742-200.png",
           "circuitName": "Suzuka Circuit",
           "Location": {
             "lat": "34.8431",
@@ -231,7 +231,7 @@
         },
         {
           "circuitId": "vegas",
-          "url": "https://en.wikipedia.org/wiki/Las_Vegas_Grand_Prix#Circuit",
+          "url": "https://images.ctfassets.net/1fvlg6xqnm65/72813b0G2eSbZkPq26bHAi/d198c23a9b855b4653541609234183e6/LAS_VEGAS_TRACK.png",
           "circuitName": "Las Vegas Strip Street Circuit",
           "Location": {
             "lat": "36.1147",
@@ -242,7 +242,7 @@
         },
         {
           "circuitId": "villeneuve",
-          "url": "http://en.wikipedia.org/wiki/Circuit_Gilles_Villeneuve",
+          "url": "https://e7.pngegg.com/pngimages/1018/1021/png-clipart-canadian-grand-prix-circuit-gilles-villeneuve-baku-city-circuit-2018-fia-formula-one-world-championship-auto-racing-scuderia-ferrari-angle-white-thumbnail.png",
           "circuitName": "Circuit Gilles Villeneuve",
           "Location": {
             "lat": "45.5",
@@ -253,7 +253,7 @@
         },
         {
           "circuitId": "yas_marina",
-          "url": "http://en.wikipedia.org/wiki/Yas_Marina_Circuit",
+          "url": "https://en.gpvwc.com/wiki/images/8/81/Circuit_Yas_Marina.png",
           "circuitName": "Yas Marina Circuit",
           "Location": {
             "lat": "24.4672",
@@ -264,7 +264,7 @@
         },
         {
           "circuitId": "zandvoort",
-          "url": "http://en.wikipedia.org/wiki/Circuit_Zandvoort",
+          "url": "https://www.cityshapes.nl/wp-content/uploads/2020/03/Zandvoort_Zw.-MDF-03-1800x1286.png",
           "circuitName": "Circuit Park Zandvoort",
           "Location": {
             "lat": "52.3888",
