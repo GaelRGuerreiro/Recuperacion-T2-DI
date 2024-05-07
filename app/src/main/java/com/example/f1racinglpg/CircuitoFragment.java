@@ -28,7 +28,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class InicioFragment extends Fragment {
+public class CircuitoFragment extends Fragment {
     private RecyclerView recyclerView;
     private Activity activity;
     private TextView nombreCircuito;
@@ -41,17 +41,15 @@ public class InicioFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View layout = inflater.inflate(R.layout.inicio_fragment, container, false);
-        recyclerView = layout.findViewById(R.id.inicio_recycler); // Obtener una referencia al RecyclerView desde el diseño
+        View layout = inflater.inflate(R.layout.circuito_fragment, container, false);
+        recyclerView = layout.findViewById(R.id.circuito_recycler); // Obtener una referencia al RecyclerView desde el diseño
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(recyclerView.getContext(),
                 ((LinearLayoutManager) recyclerView.getLayoutManager()).getOrientation());
         recyclerView.addItemDecoration(dividerItemDecoration);
-        nombreCircuito= layout.findViewById(R.id.circuitNameTextView);
 
-        // Realizar la solicitud JSON utilizando Volley
-        String url = "https://ergast.com/api/f1/current/last/results.json";
+        String url = "https://raw.githubusercontent.com/GaelRGuerreiro/Recuperacion-T2-DI/main/circuitos.json";
         JsonObjectRequest request = new JsonObjectRequest(
                 Request.Method.GET,
                 url,
@@ -59,34 +57,14 @@ public class InicioFragment extends Fragment {
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
-                        try{
-
-                            JSONArray races = response.getJSONObject("MRData")
-                                    .getJSONObject("RaceTable")
-                                    .getJSONArray("Races");
-                            List  <CorredorData> allTheData = new ArrayList<>();
-
-                            JSONObject race = races.getJSONObject(0);
-
-                            JSONObject circuit = race.getJSONObject("Circuit");
-                            String circuitName = circuit.getString("circuitName");
-                            nombreCircuito.setText(circuitName);
-
-
-                        }catch(Exception e){}
-
-
 
                         // Llamar al método parseJson para parsear la respuesta JSON
-                        List<CorredorData> corredorDataArray = parseJson(response);
+                        List<CircuitoData> circuitoDataArray = parseJson(response);
 
-                        // Prueba para trabajar si no va la pagina
-                        //new ArrayList<>();
-                        // CorredorData x = new CorredorData("MAX","Opel","2","1:21:21.123","18");
-                        //corredorDataArray.add(x);
-                        if (corredorDataArray != null) {
+
+                        if (circuitoDataArray != null) {
                             // Crear un adaptador con los datos parseados y configurar el RecyclerView
-                            InicioViewAdapter adapter = new InicioViewAdapter(corredorDataArray, activity);
+                            CircuitoViewAdapter adapter = new CircuitoViewAdapter(circuitoDataArray, activity);
                             recyclerView.setAdapter(adapter);
                             recyclerView.setLayoutManager(new LinearLayoutManager(activity));
                         } else {
@@ -114,38 +92,35 @@ public class InicioFragment extends Fragment {
 
 
 
-    private List<CorredorData> parseJson(JSONObject response) {
+    private List<CircuitoData> parseJson(JSONObject response) {
         try {
-            JSONArray races = response.getJSONObject("MRData")
-                    .getJSONObject("RaceTable")
-                    .getJSONArray("Races");
-            List   <CorredorData> allTheData = new ArrayList<>();
+            JSONArray circuits = response.getJSONObject("MRData")
+                    .getJSONObject("CircuitTable")
+                    .getJSONArray("Circuits");
+            List<CircuitoData> allCircuits = new ArrayList<>();
 
-            JSONObject race = races.getJSONObject(0);
-            JSONArray results = race.getJSONArray("Results");
-            for (int i = 0; i < results.length(); i++) {
-                JSONObject result = results.getJSONObject(i);
-                JSONObject circuit = race.getJSONObject("Circuit");
-
-                String driverName = result.getJSONObject("Driver").getString("code");
-                String constructorName = result.getJSONObject("Constructor").getString("name");
-                String position = result.getString("position");
-                String points = "+"+result.getString("points");
-                String time="";
-                try {
-                    time = result.getJSONObject("Time").getString("time");
-                }catch(JSONException e){
-                    time = "0:00:00";
-                }
-                CorredorData data = new CorredorData( driverName, constructorName, position, time,points );
-                allTheData.add(data);
+            for (int i = 0; i < circuits.length(); i++) {
+                JSONObject circuit = circuits.getJSONObject(i);
+                JSONObject location = circuit.getJSONObject("Location");
+                String circuitUrl = circuit.getString("url");
+                String circuitName = circuit.getString("circuitName");
+                String locality = location.getString("locality");
+                String country = location.getString("country");
+                String latitud = location.getString("lat");
+                String longitud = location.getString("long");
+                CircuitoData data = new CircuitoData( circuitUrl,circuitName,latitud,longitud, locality, country);
+                allCircuits.add(data);
             }
 
-            // Convertir la lista de objetos InicioData a un array
-            return allTheData;
+            return allCircuits;
         } catch (JSONException e) {
             e.printStackTrace();
-            return null; // Devolver null en caso de error
+            return null;
         }
     }
 }
+
+
+
+
+

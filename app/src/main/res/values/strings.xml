@@ -8,4 +8,6 @@
     <string name="navigation_drawer_open" />
     <string name="navigation_drawer_close" />
     <string name="separator"></string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="title_circuitDetail" />
 </resources>
