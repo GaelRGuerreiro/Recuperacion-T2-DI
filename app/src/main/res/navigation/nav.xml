@@ -15,6 +15,16 @@
             android:defaultValue="@string/inicio"
             app:argType="reference" />
     </fragment>
+    <fragment
+        android:id="@+id/circuitos"
+        android:name="com.example.f1racinglpg.CircuitoFragment"
+        tools:layout="@layout/circuito_fragment">
+        <argument
+            android:name="text_id"
+            android:defaultValue="@string/circuitos"
+            app:argType="reference"/>
+    </fragment>
+
 
 
 </navigation>

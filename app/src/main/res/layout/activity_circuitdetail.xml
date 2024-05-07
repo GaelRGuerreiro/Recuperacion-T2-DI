@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey">
+
+
+
+
+
+
+
+
+    <ImageView
+        android:id="@+id/imageCircuit"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintBottom_toBottomOf="@+id/pais"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintStart_toEndOf="@+id/localidad"
+        app:layout_constraintTop_toTopOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.538" />
+
+    <TextView
+        android:id="@+id/nombreCircuito"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Circuito de España"
+        android:textColor="@color/orenage"
+        android:textSize="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/localidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Cataluña"
+        android:textAlignment="viewStart"
+        android:textColor="@color/yellow"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/mapFragment"
+        app:layout_constraintStart_toStartOf="@+id/mapFragment"
+        app:layout_constraintTop_toBottomOf="@+id/nombreCircuito"
+        app:layout_constraintVertical_bias="0.272" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pais: "
+        android:textSize="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/pais"
+        app:layout_constraintStart_toStartOf="@+id/pais" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Localidad: "
+        android:textSize="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/localidad"
+        app:layout_constraintStart_toStartOf="@+id/mapFragment" />
+
+    <TextView
+        android:id="@+id/pais"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" España"
+        android:textAlignment="viewStart"
+        android:textColor="@color/yellow"
+        android:textSize="25dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/mapFragment"
+        app:layout_constraintStart_toStartOf="@+id/localidad"
+        app:layout_constraintTop_toBottomOf="@+id/localidad"
+        app:layout_constraintVertical_bias="0.272" />
+
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.67" />
+
+    <LinearLayout
+        android:id="@+id/zoomControls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btnZoomIn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="15dp"
+        android:background="?android:selectableItemBackground"
+        android:scaleType="centerInside"
+        android:src="@drawable/mas"
+        app:layout_constraintEnd_toStartOf="@+id/btnZoomOut"
+        app:layout_constraintTop_toBottomOf="@+id/mapFragment" />
+
+    <ImageButton
+        android:id="@+id/btnZoomOut"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="?android:selectableItemBackground"
+        android:scaleType="centerInside"
+        android:src="@drawable/menos"
+        app:layout_constraintEnd_toEndOf="@+id/mapFragment"
+        app:layout_constraintTop_toBottomOf="@+id/mapFragment" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
