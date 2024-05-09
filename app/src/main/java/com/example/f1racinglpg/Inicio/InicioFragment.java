@@ -1,4 +1,4 @@
-package com.example.f1racinglpg;
+package com.example.f1racinglpg.Inicio;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -20,6 +20,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.f1racinglpg.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;

@@ -1,15 +1,15 @@
-package com.example.f1racinglpg;
+package com.example.f1racinglpg.CamPilotos;
+
+import androidx.fragment.app.Fragment;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -20,6 +20,10 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.f1racinglpg.Circuitos.CircuitoData;
+import com.example.f1racinglpg.Circuitos.CircuitoViewAdapter;
+import com.example.f1racinglpg.Inicio.CorredorData;
+import com.example.f1racinglpg.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -28,10 +32,9 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CircuitoFragment extends Fragment {
+public class CamPilotosFragment extends Fragment {
     private RecyclerView recyclerView;
     private Activity activity;
-    private TextView nombreCircuito;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -41,15 +44,15 @@ public class CircuitoFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View layout = inflater.inflate(R.layout.circuito_fragment, container, false);
-        recyclerView = layout.findViewById(R.id.circuito_recycler); // Obtener una referencia al RecyclerView desde el diseño
+        View layout = inflater.inflate(R.layout.campilotos_fragment, container, false);
+        recyclerView = layout.findViewById(R.id.campilotos_recycler); // Obtener una referencia al RecyclerView desde el diseño
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(recyclerView.getContext(),
                 ((LinearLayoutManager) recyclerView.getLayoutManager()).getOrientation());
         recyclerView.addItemDecoration(dividerItemDecoration);
 
-        String url = "https://raw.githubusercontent.com/GaelRGuerreiro/Recuperacion-T2-DI/main/circuitos.json";
+        String url = "https://ergast.com/api/f1/current/driverStandings.json";
         JsonObjectRequest request = new JsonObjectRequest(
                 Request.Method.GET,
                 url,
@@ -59,12 +62,12 @@ public class CircuitoFragment extends Fragment {
                     public void onResponse(JSONObject response) {
 
                         // Llamar al método parseJson para parsear la respuesta JSON
-                        List<CircuitoData> circuitoDataArray = parseJson(response);
+                        List<CamPilotoData> pilotoDataArray = parseJson(response);
 
 
-                        if (circuitoDataArray != null) {
+                        if (pilotoDataArray != null) {
                             // Crear un adaptador con los datos parseados y configurar el RecyclerView
-                            CircuitoViewAdapter adapter = new CircuitoViewAdapter(circuitoDataArray, activity);
+                           CamPilotosViewAdapter adapter = new CamPilotosViewAdapter(pilotoDataArray, activity);
                             recyclerView.setAdapter(adapter);
                             recyclerView.setLayoutManager(new LinearLayoutManager(activity));
                         } else {
@@ -92,33 +95,40 @@ public class CircuitoFragment extends Fragment {
 
 
 
-    private List<CircuitoData> parseJson(JSONObject response) {
+    private List<CamPilotoData> parseJson(JSONObject response) {
         try {
-            JSONArray circuits = response.getJSONObject("MRData")
-                    .getJSONObject("CircuitTable")
-                    .getJSONArray("Circuits");
-            List<CircuitoData> allCircuits = new ArrayList<>();
+            JSONArray drivers = response.getJSONObject("MRData")
+                    .getJSONObject("StandingsTable")
+                    .getJSONArray("StandingsLists");
+            List   <CamPilotoData> allTheData = new ArrayList<>();
 
-            for (int i = 0; i < circuits.length(); i++) {
-                JSONObject circuit = circuits.getJSONObject(i);
-                JSONObject location = circuit.getJSONObject("Location");
-                String circuitUrl = circuit.getString("url");
-                String circuitName = circuit.getString("circuitName");
-                String locality = location.getString("locality");
-                String country = location.getString("country");
-                String latitud = location.getString("lat");
-                String longitud = location.getString("long");
-                CircuitoData data = new CircuitoData( circuitUrl,circuitName,latitud,longitud, locality, country);
-                allCircuits.add(data);
+            JSONObject driver = drivers.getJSONObject(0);
+            JSONArray results = driver.getJSONArray("DriverStandings");
+            for (int i = 0; i < results.length(); i++) {
+                JSONObject result = results.getJSONObject(i);
+
+                String driverCode = result.getJSONObject("Driver").getString("code");
+                String driverName = result.getJSONObject("Driver").getString("givenName")+" "+result.getJSONObject("Driver").getString("familyName");
+                String constructorName = result.getJSONArray("Constructors").getJSONObject(0).getString("name");
+                String position = result.getString("position");
+                String points = result.getString("points");
+                String wins = result.getString("wins");
+                String birth = result.getJSONObject("Driver").getString("dateOfBirth");
+                String nationality = result.getJSONObject("Driver").getString("nationality");
+
+
+                CamPilotoData data = new CamPilotoData( position,points,wins,driverName,constructorName,driverCode,birth,nationality );
+                allTheData.add(data);
             }
 
-            return allCircuits;
+            return allTheData;
         } catch (JSONException e) {
             e.printStackTrace();
             return null;
         }
     }
 }
+
 
 
 

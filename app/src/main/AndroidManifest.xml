@@ -34,12 +34,12 @@
             android:value="AIzaSyDepnk_Vlv1_9OT6MM-wPQ9LsqzQ1nKZtI" />
 
         <activity
-            android:name=".CircuitDetailActivity"
+            android:name=".Circuitos.CircuitDetailActivity"
             android:exported="false"
             android:label="@string/title_circuitDetail" />
-        <activity android:name=".RegisterActivity"></activity>
+        <activity android:name=".LoginRegister.RegisterActivity"></activity>
         <activity
-            android:name=".LoginActivity"
+            android:name=".LoginRegister.LoginActivity"
             android:exported="true"></activity>
         <activity
             android:name=".MainActivity"

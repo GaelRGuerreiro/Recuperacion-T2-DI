@@ -1,4 +1,4 @@
-package com.example.f1racinglpg;
+package com.example.f1racinglpg.Inicio;
 
 import android.view.View;
 import android.widget.TextView;
@@ -8,6 +8,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
+
+import com.example.f1racinglpg.R;
 
 public class InicioViewHolder extends RecyclerView.ViewHolder {
 
