@@ -10,6 +10,15 @@ public class CamPilotoData {
     private String code;
     private String Birth;
     private String nationality;
+    private String permanentNumber;
+
+    public String getPermanentNumber() {
+        return permanentNumber;
+    }
+
+    public void setPermanentNumber(String permanentNumber) {
+        this.permanentNumber = permanentNumber;
+    }
 
     public String getPosition() {
         return position;
@@ -72,7 +81,7 @@ public class CamPilotoData {
         this.nationality = nationality;
     }
 
-    public CamPilotoData(String position, String points, String wins, String name,String constructor, String code, String birth, String nationality) {
+    public CamPilotoData(String position, String points, String wins, String name,String constructor, String code, String birth, String nationality,String permanentNumber) {
         this.position = position;
         this.points = points;
         this.wins = wins;
@@ -81,5 +90,6 @@ public class CamPilotoData {
         this.code = code;
         Birth = birth;
         this.nationality = nationality;
+        this.permanentNumber=permanentNumber;
     }
 }

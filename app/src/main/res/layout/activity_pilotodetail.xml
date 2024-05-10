@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey">
+
+    <!-- ImageView de piloto -->
+
+    <ImageView
+        android:id="@+id/imageViewPiloto"
+        android:layout_width="128dp"
+        android:layout_height="136dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- TextViews de nombre y escuderia -->
+
+    <TextView
+        android:id="@+id/textViewNombre"
+        android:layout_width="248dp"
+        android:layout_height="53dp"
+        android:text="Max Verstappen"
+        android:textColor="@android:color/black"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageViewPiloto"
+        app:layout_constraintTop_toTopOf="@+id/imageViewPiloto" />
+
+    <!-- TextViews de número, victorias, puntos, nacimiento y nacionalidad -->
+
+    <TextView
+        android:textStyle="bold"
+
+        android:id="@+id/textViewEscuderia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Red Bull"
+        android:textColor="@android:color/black"
+        android:textSize="30dp"
+        app:layout_constraintStart_toStartOf="@+id/textViewNombre"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNombre" />
+
+    <TextView
+        android:id="@+id/textViewNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Número: 33"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/imageViewPiloto"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewPiloto" />
+
+    <TextView
+        android:id="@+id/textViewVictorias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Victorias: 12"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/textViewNumber"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNumber" />
+
+    <TextView
+        android:id="@+id/textViewPuntos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="40dp"
+        android:text="Puntos: 123"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/textViewVictorias"
+        app:layout_constraintTop_toBottomOf="@+id/textViewVictorias" />
+
+    <TextView
+        android:id="@+id/textViewNacimiento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Nacimiento: 1990/21/2"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/textViewPuntos"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPuntos" />
+
+    <TextView
+        android:id="@+id/textViewNacionalidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Nacionalidad: Peruano"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/textViewNacimiento"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNacimiento" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

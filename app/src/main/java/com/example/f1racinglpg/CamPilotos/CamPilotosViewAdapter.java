@@ -2,6 +2,8 @@ package com.example.f1racinglpg.CamPilotos;
 
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,6 +40,23 @@ public class CamPilotosViewAdapter extends RecyclerView.Adapter<CamPilotosViewHo
     public void onBindViewHolder(@NonNull CamPilotosViewHolder holder, int position) {
         CamPilotoData dataForThisCell = drivers.get(position);
         holder.bind(dataForThisCell);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Context context = v.getContext();
+                Intent intent = new Intent(context, CamPilotosDetailActivity.class);
+                intent.putExtra("points",dataForThisCell.getPoints());
+                intent.putExtra("wins",dataForThisCell.getWins());
+                intent.putExtra("name",dataForThisCell.getName());
+                intent.putExtra("constructor",dataForThisCell.getConstructor());
+                intent.putExtra("birth",dataForThisCell.getBirth());
+                intent.putExtra("nationality",dataForThisCell.getNationality());
+                intent.putExtra("permanentNumber",dataForThisCell.getPermanentNumber());
+
+                context.startActivity(intent);
+            }
+        });
     }
 
 

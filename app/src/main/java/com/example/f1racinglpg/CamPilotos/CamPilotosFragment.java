@@ -115,9 +115,9 @@ public class CamPilotosFragment extends Fragment {
                 String wins = result.getString("wins");
                 String birth = result.getJSONObject("Driver").getString("dateOfBirth");
                 String nationality = result.getJSONObject("Driver").getString("nationality");
+                String permanentNumber=result.getJSONObject("Driver").getString("permanentNumber");
 
-
-                CamPilotoData data = new CamPilotoData( position,points,wins,driverName,constructorName,driverCode,birth,nationality );
+                CamPilotoData data = new CamPilotoData( position,points,wins,driverName,constructorName,driverCode,birth,nationality,permanentNumber);
                 allTheData.add(data);
             }
 
