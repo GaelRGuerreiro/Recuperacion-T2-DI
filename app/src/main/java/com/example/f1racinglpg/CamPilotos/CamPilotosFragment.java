@@ -107,6 +107,8 @@ public class CamPilotosFragment extends Fragment {
             for (int i = 0; i < results.length(); i++) {
                 JSONObject result = results.getJSONObject(i);
 
+
+                //  PENDIENTE DE HACER IMAGEN CREANDO JSON
                 String driverCode = result.getJSONObject("Driver").getString("code");
                 String driverName = result.getJSONObject("Driver").getString("givenName")+" "+result.getJSONObject("Driver").getString("familyName");
                 String constructorName = result.getJSONArray("Constructors").getJSONObject(0).getString("name");
