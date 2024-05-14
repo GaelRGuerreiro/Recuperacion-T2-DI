@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/inicio"
-        android:name="com.example.f1racinglpg.InicioFragment"
+        android:name="com.example.f1racinglpg.Inicio.InicioFragment"
         tools:layout="@layout/inicio_fragment">
         <argument
             android:name="text_id"
@@ -17,11 +17,20 @@
     </fragment>
     <fragment
         android:id="@+id/circuitos"
-        android:name="com.example.f1racinglpg.CircuitoFragment"
+        android:name="com.example.f1racinglpg.Circuitos.CircuitoFragment"
         tools:layout="@layout/circuito_fragment">
         <argument
             android:name="text_id"
             android:defaultValue="@string/circuitos"
+            app:argType="reference"/>
+    </fragment>
+    <fragment
+        android:id="@+id/pilotos"
+        android:name="com.example.f1racinglpg.CamPilotos.CamPilotosFragment"
+        tools:layout="@layout/campilotos_fragment">
+        <argument
+            android:name="text_id"
+            android:defaultValue="@string/pilotos"
             app:argType="reference"/>
     </fragment>
 

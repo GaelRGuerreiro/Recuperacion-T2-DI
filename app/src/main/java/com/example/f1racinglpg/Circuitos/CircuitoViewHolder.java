@@ -1,4 +1,4 @@
-package com.example.f1racinglpg;
+package com.example.f1racinglpg.Circuitos;
 
 import android.view.View;
 import android.widget.ImageView;
@@ -9,6 +9,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
+
+import com.example.f1racinglpg.R;
+import com.example.f1racinglpg.Util;
 
 public class CircuitoViewHolder extends RecyclerView.ViewHolder {
 

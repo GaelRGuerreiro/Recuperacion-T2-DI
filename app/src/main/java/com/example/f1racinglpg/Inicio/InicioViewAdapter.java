@@ -1,4 +1,4 @@
-package com.example.f1racinglpg;
+package com.example.f1racinglpg.Inicio;
 
 
 import android.app.Activity;
@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.f1racinglpg.R;
 
 import java.util.List;
 
