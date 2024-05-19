@@ -1,6 +1,7 @@
 package com.example.f1racinglpg.CamPilotos;
 
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -18,6 +19,7 @@ public class CamPilotosViewHolder extends RecyclerView.ViewHolder {
     private TextView ConstructorTextView;
     private TextView pointsTextView;
     private TextView winsTextView;
+    private ImageView driverImageView;
 
 
 
@@ -29,6 +31,7 @@ public class CamPilotosViewHolder extends RecyclerView.ViewHolder {
         ConstructorTextView = itemView.findViewById(R.id.ConstructorTextView);
         pointsTextView = itemView.findViewById(R.id.pointsTextView);
         winsTextView=itemView.findViewById(R.id.winsTextView);
+        driverImageView=itemView.findViewById(R.id.imageViewPiloto);
     }
 
     public void bind(CamPilotoData camPilotoData) {

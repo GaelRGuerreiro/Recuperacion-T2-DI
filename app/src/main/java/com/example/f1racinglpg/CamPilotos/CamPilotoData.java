@@ -12,6 +12,12 @@ public class CamPilotoData {
     private String nationality;
     private String permanentNumber;
 
+
+
+
+
+
+
     public String getPermanentNumber() {
         return permanentNumber;
     }
@@ -92,4 +98,6 @@ public class CamPilotoData {
         this.nationality = nationality;
         this.permanentNumber=permanentNumber;
     }
+
+
 }

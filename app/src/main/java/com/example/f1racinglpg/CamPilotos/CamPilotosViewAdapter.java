@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.f1racinglpg.R;
 
 import java.util.List;
@@ -35,29 +36,30 @@ public class CamPilotosViewAdapter extends RecyclerView.Adapter<CamPilotosViewHo
     }
 
 
-    // Método llamado para actualizar el contenido de un FilmViewHolder específico.
     @Override
     public void onBindViewHolder(@NonNull CamPilotosViewHolder holder, int position) {
         CamPilotoData dataForThisCell = drivers.get(position);
         holder.bind(dataForThisCell);
 
+        // Configurar el OnClickListener para iniciar la actividad de detalles al hacer clic en el elemento del RecyclerView
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Context context = v.getContext();
                 Intent intent = new Intent(context, CamPilotosDetailActivity.class);
-                intent.putExtra("points",dataForThisCell.getPoints());
-                intent.putExtra("wins",dataForThisCell.getWins());
-                intent.putExtra("name",dataForThisCell.getName());
-                intent.putExtra("constructor",dataForThisCell.getConstructor());
-                intent.putExtra("birth",dataForThisCell.getBirth());
-                intent.putExtra("nationality",dataForThisCell.getNationality());
-                intent.putExtra("permanentNumber",dataForThisCell.getPermanentNumber());
-
+                intent.putExtra("points", dataForThisCell.getPoints());
+                intent.putExtra("wins", dataForThisCell.getWins());
+                intent.putExtra("name", dataForThisCell.getName());
+                intent.putExtra("constructor", dataForThisCell.getConstructor());
+                intent.putExtra("birth", dataForThisCell.getBirth());
+                intent.putExtra("nationality", dataForThisCell.getNationality());
+                intent.putExtra("permanentNumber", dataForThisCell.getPermanentNumber());
                 context.startActivity(intent);
             }
         });
     }
+
+
 
 
 

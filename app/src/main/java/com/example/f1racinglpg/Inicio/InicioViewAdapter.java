@@ -38,6 +38,8 @@ public class InicioViewAdapter extends RecyclerView.Adapter<InicioViewHolder> {
     public void onBindViewHolder(@NonNull InicioViewHolder holder, int position) {
         CorredorData dataForThisCell = race.get(position);
         holder.bind(dataForThisCell);
+
+
     }
 
 

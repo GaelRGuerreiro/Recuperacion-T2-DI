@@ -100,26 +100,24 @@ public class CamPilotosFragment extends Fragment {
             JSONArray drivers = response.getJSONObject("MRData")
                     .getJSONObject("StandingsTable")
                     .getJSONArray("StandingsLists");
-            List   <CamPilotoData> allTheData = new ArrayList<>();
+            List<CamPilotoData> allTheData = new ArrayList<>();
 
             JSONObject driver = drivers.getJSONObject(0);
             JSONArray results = driver.getJSONArray("DriverStandings");
             for (int i = 0; i < results.length(); i++) {
                 JSONObject result = results.getJSONObject(i);
 
-
-                //  PENDIENTE DE HACER IMAGEN CREANDO JSON
                 String driverCode = result.getJSONObject("Driver").getString("code");
-                String driverName = result.getJSONObject("Driver").getString("givenName")+" "+result.getJSONObject("Driver").getString("familyName");
+                String driverName = result.getJSONObject("Driver").getString("givenName") + " " + result.getJSONObject("Driver").getString("familyName");
                 String constructorName = result.getJSONArray("Constructors").getJSONObject(0).getString("name");
                 String position = result.getString("position");
                 String points = result.getString("points");
                 String wins = result.getString("wins");
                 String birth = result.getJSONObject("Driver").getString("dateOfBirth");
                 String nationality = result.getJSONObject("Driver").getString("nationality");
-                String permanentNumber=result.getJSONObject("Driver").getString("permanentNumber");
+                String permanentNumber = result.getJSONObject("Driver").getString("permanentNumber");
 
-                CamPilotoData data = new CamPilotoData( position,points,wins,driverName,constructorName,driverCode,birth,nationality,permanentNumber);
+                CamPilotoData data = new CamPilotoData(position, points, wins, driverName, constructorName, driverCode, birth, nationality, permanentNumber);
                 allTheData.add(data);
             }
 
