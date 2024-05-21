@@ -33,6 +33,16 @@
             android:defaultValue="@string/pilotos"
             app:argType="reference"/>
     </fragment>
+    <fragment
+        android:id="@+id/constructores"
+        android:name="com.example.f1racinglpg.CamConstructores.CamConsFragment"
+        tools:layout="@layout/camcons_fragment">
+        <argument
+            android:name="text_id"
+            android:defaultValue="@string/constructores"
+            app:argType="reference"/>
+    </fragment>
+
 
 
 

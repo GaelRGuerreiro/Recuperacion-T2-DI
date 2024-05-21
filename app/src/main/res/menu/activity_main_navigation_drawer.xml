@@ -26,9 +26,9 @@
 
         <item
 
-            android:id="@+id/escuderias"
+            android:id="@+id/constructores"
             android:icon="@drawable/f1"
-            android:title="@string/escuderias" />
+            android:title="@string/constructores" />
 
         <item
 
