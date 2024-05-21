@@ -36,6 +36,10 @@
                     android:exported="false"
                     android:label="@string/title_PilotDetail"
          />
+        <activity android:name=".CamConstructores.CamConsDetail"
+            android:exported="false"
+            android:label="@string/title_PilotDetail"
+            />
         <activity
             android:name=".Circuitos.CircuitDetailActivity"
             android:exported="false"

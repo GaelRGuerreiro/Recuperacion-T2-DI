@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity
         NavController navController = navHostFragment.getNavController();
 
         appBarConfiguration =
-                new AppBarConfiguration.Builder(R.id.inicio, R.id.circuitos, R.id.perfil, R.id.escuderias, R.id.pilotos)
+                new AppBarConfiguration.Builder(R.id.inicio, R.id.circuitos, R.id.perfil, R.id.constructores, R.id.pilotos)
                         .setOpenableLayout(drawerLayout)
                         .build();
 
@@ -98,8 +98,8 @@ public class MainActivity extends AppCompatActivity
             return R.string.circuitos;
         } else if (itemId == R.id.perfil) {
             return R.string.Perfil;
-        } else if (itemId == R.id.escuderias) {
-            return R.string.escuderias;
+        } else if (itemId == R.id.constructores) {
+            return R.string.constructores;
         } else if (itemId == R.id.pilotos) {
             return R.string.pilotos;
         } else {

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey">
+
+
+    <TextView
+        android:layout_marginTop="40dp"
+        android:id="@+id/cabecera"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ficha de Constructor"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="460dp"
+        android:layout_marginLeft="10dp"
+        app:cardBackgroundColor="@android:color/darker_gray"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cabecera">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <!-- CardView para la imagen del piloto -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewImage"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageViewPiloto"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/image" />
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- CardView para el nombre del piloto -->
+
+
+            <!-- Otros elementos dentro de CardView -->
+
+            <!-- TextViews de nombre y escudería -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewEquipo"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="20dp"
+                app:cardBackgroundColor="#3C3F41"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardViewImage">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+
+                    >
+
+
+                    <TextView
+                        android:id="@+id/textViewEscuderia"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Red Bull"
+                        android:textAlignment="center"
+                        android:textColor="@color/orenage"
+                        android:textSize="40dp"
+                        android:textStyle="bold" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewPuntos"
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                app:cardBackgroundColor="#3C3F41"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="4dp"
+                app:layout_constraintStart_toStartOf="@id/cardViewEquipo"
+                app:layout_constraintTop_toBottomOf="@id/cardViewEquipo">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp">
+
+                    <TextView
+                        android:id="@+id/textPuntos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Puntos"
+                        android:textColor="@color/buttonColor"
+                        android:textSize="25sp" />
+
+
+                    <TextView
+                        android:id="@+id/textViewPuntos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="123"
+                        android:textColor="@color/orenage"
+                        android:textSize="25sp"
+                        app:layout_constraintStart_toEndOf="@id/textPuntos" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewVictorias"
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                app:cardBackgroundColor="#3C3F41"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="4dp"
+                app:layout_constraintEnd_toEndOf="@id/cardViewEquipo"
+                app:layout_constraintTop_toBottomOf="@id/cardViewEquipo">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp">
+
+                    <TextView
+                        android:id="@+id/textVictorias"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Victorias: "
+                        android:textColor="@color/buttonColor"
+
+                        android:textSize="25dp" />
+
+                    <TextView
+                        android:id="@+id/textViewVictorias"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="12"
+                        android:textColor="@color/orenage"
+                        android:textSize="25dp"
+                        app:layout_constraintStart_toEndOf="@id/textVictorias" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewNacionalidad"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp"
+                app:cardBackgroundColor="#3C3F41"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="4dp"
+                app:layout_constraintEnd_toEndOf="@id/cardViewEquipo"
+                app:layout_constraintStart_toStartOf="@+id/cardViewEquipo"
+                app:layout_constraintTop_toBottomOf="@id/cardViewPuntos">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <TextView
+                        android:id="@+id/textNacionalidad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Nacionalidad: "
+                        android:textColor="@color/buttonColor"
+                        android:textSize="28dp" />
+
+                    <TextView
+                        android:id="@+id/textViewNacionalidad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Peruano"
+                        android:textColor="@color/orenage"
+                        android:textSize="28sp"
+                        app:layout_constraintStart_toEndOf="@id/textNacionalidad" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

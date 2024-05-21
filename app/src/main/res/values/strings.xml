@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">F1 Racing LPG</string>
     <string name="pilotos">Pilotos</string>
-    <string name="escuderias">Escuderias</string>
+    <string name="constructores">Constructores</string>
     <string name="Perfil">Perfil</string>
     <string name="circuitos">Circuitos</string>
     <string name="inicio">Inicio</string>
